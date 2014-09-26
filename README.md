@@ -1,3 +1,3 @@
-## BenGoZen's To Do App
+## CrossItOff - To Do Application
 
 Currently under construction!
