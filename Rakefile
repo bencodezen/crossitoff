@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Bgztodo::Application.load_tasks
+CrossItOff::Application.load_tasks

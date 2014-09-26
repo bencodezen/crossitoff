@@ -1,0 +1,61 @@
+Searching 529 files for "bgztodo" (regex)
+
+/Users/hongb1/Projects/code/crossitoff/Rakefile:
+    4  require File.expand_path('../config/application', __FILE__)
+    5  
+    6: Bgztodo::Application.load_tasks
+    7  
+
+/Users/hongb1/Projects/code/crossitoff/app/views/layouts/application.html.erb:
+    2  <html>
+    3  <head>
+    4:   <title>Bgztodo</title>
+    5    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+/Users/hongb1/Projects/code/crossitoff/config/application.rb:
+   12  Bundler.require(*Rails.groups)
+   13  
+   14: module Bgztodo
+   15    class Application < Rails::Application
+   16      # Settings in config/environments/* take precedence over those specified here.
+
+/Users/hongb1/Projects/code/crossitoff/config/environment.rb:
+    3  
+    4  # Initialize the Rails application.
+    5: Bgztodo::Application.initialize!
+    6  
+
+/Users/hongb1/Projects/code/crossitoff/config/routes.rb:
+    1: Bgztodo::Application.routes.draw do
+    2    get "welcome/index"
+    3    get "welcome/about"
+
+/Users/hongb1/Projects/code/crossitoff/config/environments/development.rb:
+    1: Bgztodo::Application.configure do
+    2    # Settings specified here will take precedence over those in config/application.rb.
+    3  
+
+/Users/hongb1/Projects/code/crossitoff/config/environments/production.rb:
+    1: Bgztodo::Application.configure do
+    2    # Settings specified here will take precedence over those in config/application.rb.
+    3  
+
+/Users/hongb1/Projects/code/crossitoff/config/environments/test.rb:
+    1: Bgztodo::Application.configure do
+    2    # Settings specified here will take precedence over those in config/application.rb.
+    3  
+
+/Users/hongb1/Projects/code/crossitoff/config/initializers/secret_token.rb:
+   10  # Make sure your secret_key_base is kept private
+   11  # if you're sharing your code publicly.
+   12: Bgztodo::Application.config.secret_key_base = 'ddd2581c7c852a3e47cf0b5cad18b50bf2100f222bb0ec8a89638d5313e2edcdd1100c6d61c0644ee87032af3c988c3d8813a3d16ac1be7006674299c602b7fd'
+   13  
+
+/Users/hongb1/Projects/code/crossitoff/config/initializers/session_store.rb:
+    1  # Be sure to restart your server when you modify this file.
+    2  
+    3: Bgztodo::Application.config.session_store :cookie_store, key: '_bgztodo_session'
+    4  
+
+11 matches across 10 files
