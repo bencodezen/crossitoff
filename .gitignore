@@ -14,3 +14,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore Mindnode File
+/*.mindnode
+
+# Ignore Mac DS_Store
+/*.DS_Store
