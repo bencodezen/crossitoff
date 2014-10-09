@@ -1,0 +1,23 @@
+<h1>All Items for <%= current_user.name %></h1>
+
+<%= form_for [current_user, @item] do |f| %>
+   <div class="form-group">
+     <%= f.label :title %>
+     <%= f.text_field :title, class: 'form-control', placeholder: "Enter you task." %>
+   </div>
+   <div class="form-group">
+     <%= f.submit "Save", class: 'btn btn-success' %>
+   </div>
+ <% end %>
+
+<% @items.each do |item| %>
+  <div class="media">
+    <div class="media-body">
+      <div class="media-heading">
+        <%= link_to item.title, [item.user, item] %>
+        <p>Time Remaining !!! item.remaining_time !!! days</p>
+      </div>
+    </div>
+  </div>
+<% end %>
+
