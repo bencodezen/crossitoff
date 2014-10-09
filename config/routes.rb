@@ -1,7 +1,9 @@
 CrossItOff::Application.routes.draw do
   devise_for :users
 
-  resources :items
+  resources :users do
+    resources :items
+  end
   
   get 'about' => "welcome/about"
 
