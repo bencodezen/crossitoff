@@ -2,6 +2,7 @@ class Users::ItemsController < ApplicationController
 
   def index
     if current_user
+      @user = User.find(params[:user_id])
       @item = Item.new
       @items = current_user.items
     else
@@ -16,8 +17,9 @@ class Users::ItemsController < ApplicationController
   end
 
   def create
-    @user = current_user
+    @user = User.find(params[:user_id])
     @item = @user.items.build(item_params)
+    @item.finished = false
 
     if @item.save
       flash[:notice] = "Item was saved."
