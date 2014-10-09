@@ -26,6 +26,7 @@ users = User.all
 50.times do
   Item.create!(
       title: Faker::Lorem.sentence,
+      finished: false,
       user: users.sample
   )
 end

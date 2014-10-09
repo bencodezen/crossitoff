@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009120306) do
+ActiveRecord::Schema.define(version: 20141009131123) do
 
   create_table "items", force: true do |t|
-    t.string   "title"
-    t.boolean  "complete"
+    t.string   "title",      null: false
+    t.boolean  "finished",   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
