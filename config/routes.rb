@@ -5,7 +5,7 @@ CrossItOff::Application.routes.draw do
     resources :items, controller: 'users/items'
   end
   
-  get 'about' => "welcome/about"
+  get 'about' => "welcome#about"
 
   root to: 'welcome#index'
 end
