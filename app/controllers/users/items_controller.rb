@@ -13,7 +13,6 @@ class Users::ItemsController < ApplicationController
   def create
     @user = User.find(params[:user_id])
     @item = @user.items.build(item_params)
-    @item.finished = false
 
     if @item.save
       flash[:notice] = "Item was saved."
