@@ -24,9 +24,10 @@
         <td><%= item.title %></td>
         <td><%= item.created_at %></td>
         <td>
-          <button type="button" class="btn btn-default btn-md center-block">
+          <%= link_to [item.user, item], method: :delete, class: 'btn btn-default center-block'  do %>
             <span class="glyphicon glyphicon-ok"></span> Complete
-          </button>
+          </a>
+          <% end %>
         </td>
       </tr>
   <% end %>

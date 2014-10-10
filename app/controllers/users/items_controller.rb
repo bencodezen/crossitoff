@@ -10,12 +10,6 @@ class Users::ItemsController < ApplicationController
     end
   end
 
-  def show
-    if current_user
-      @item = current_user.items.find(params[:id])
-    end
-  end
-
   def create
     @user = User.find(params[:user_id])
     @item = @user.items.build(item_params)
@@ -30,12 +24,19 @@ class Users::ItemsController < ApplicationController
     redirect_to user_items_path(@user)
   end
 
-  def new
-  end
+  def destroy
+    @user = User.find(params[:user_id])
+    @item = @user.items.find(params[:id])
 
-  def edit
-  end
+    if @item.destroy
+      flash[:notice] = "Item was completed."
+    else
+      flash[:error] = "Item could not be completed. Please try again."
+    end
 
+    redirect_to user_items_path(@user)
+  end
+  
   private
 
   def item_params
