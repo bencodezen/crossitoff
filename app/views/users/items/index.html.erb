@@ -10,14 +10,28 @@
    </div>
  <% end %>
 
-<% @items.each do |item| %>
-  <div class="media">
-    <div class="media-body">
-      <div class="media-heading">
-        <%= link_to item.title, [item.user, item] %>
-        <p>Time Remaining !!! item.remaining_time !!! days</p>
-      </div>
-    </div>
-  </div>
-<% end %>
+<div class="row">
+  <table class="table-striped">
+  <tr>
+    <th class="text-center">ID</th>
+    <th>Title</th>
+    <th>Remaining</th>
+    <th class="text-center">Status</th>
+  </tr>
+  <% @items.each do |item| %>
+      <tr>
+        <td class="text-center"><%= item.id %></td>
+        <td><%= item.title %></td>
+        <td><%= item.created_at %></td>
+        <td>
+          <button type="button" class="btn btn-default btn-md center-block">
+            <span class="glyphicon glyphicon-ok"></span> Complete
+          </button>
+        </td>
+      </tr>
+  <% end %>
+  </table>
+</div>
+
+
 
