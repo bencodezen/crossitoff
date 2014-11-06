@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-CrossItOff::Application.config.secret_key_base = 'ddd2581c7c852a3e47cf0b5cad18b50bf2100f222bb0ec8a89638d5313e2edcdd1100c6d61c0644ee87032af3c988c3d8813a3d16ac1be7006674299c602b7fd'
+CrossItOff::Application.config.secret_key_base = ENV['SECRET_KEY_BASE']
